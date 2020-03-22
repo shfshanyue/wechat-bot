@@ -9,6 +9,7 @@ const routes = [
 async function handleMessage (msg) {
   if (msg.type() == Message.Type.Text) {
     if (!msg.room()) {
+      console.log(msg)
       const route = routes.find(route => msg.text().includes(route.keyword))
       const reply = route.handle(msg.text())
       if (reply) {
