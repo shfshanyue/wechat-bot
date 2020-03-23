@@ -1,7 +1,7 @@
 {
   "id": 1,
   "createTime": 1579537899000,
-  "modifyTime": 1584797477000,
+  "modifyTime": 1584966653000,
   "infectSource": "该字段已替换为说明2",
   "passWay": "该字段已替换为说明3",
   "imgUrl": "https://img1.dxycdn.com/2020/0201/450/3394153392393266839-135.png",
@@ -17,18 +17,18 @@
   "summary": "",
   "deleted": false,
   "countRemark": "",
-  "currentConfirmedCount": 6311,
-  "confirmedCount": 81457,
-  "suspectedCount": 269,
-  "curedCount": 71885,
-  "deadCount": 3261,
-  "seriousCount": 1963,
-  "suspectedIncr": 41,
-  "currentConfirmedIncr": -452,
-  "confirmedIncr": 157,
-  "curedIncr": 601,
-  "deadIncr": 8,
-  "seriousIncr": -173,
+  "currentConfirmedCount": 5567,
+  "confirmedCount": 81691,
+  "suspectedCount": 354,
+  "curedCount": 72848,
+  "deadCount": 3276,
+  "seriousCount": 1749,
+  "suspectedIncr": 40,
+  "currentConfirmedIncr": -282,
+  "confirmedIncr": 193,
+  "curedIncr": 466,
+  "deadIncr": 9,
+  "seriousIncr": -96,
   "virus": "该字段已替换为说明1",
   "remark1": "易感人群：人群普遍易感。老年人及有基础疾病者感染后病情较重，儿童及婴幼儿也有发病",
   "remark2": "潜伏期：一般为 3～7 天，最长不超过 14 天，潜伏期内可能存在传染性，其中无症状病例传染性非常罕见",
@@ -42,65 +42,65 @@
   "abroadRemark": "",
   "marquee": [
     {
-      "id": 1641,
-      "marqueeLabel": "惨烈",
-      "marqueeContent": "意大利已有 132 名医务人员疫情中殉职",
-      "marqueeLink": "https://dxy.me/3emJC4"
+      "id": 1677,
+      "marqueeLabel": "欧洲互助",
+      "marqueeContent": "德国边境城市为法国患者提供治疗",
+      "marqueeLink": "https://dxy.me/pVAfJG"
     },
     {
-      "id": 1642,
-      "marqueeLabel": "突发",
-      "marqueeContent": "国足前锋武磊确诊新冠病毒感染",
-      "marqueeLink": "https://dxy.me/iCBpro"
+      "id": 1678,
+      "marqueeLabel": "醒目",
+      "marqueeContent": "最新返汉离汉政策颁布",
+      "marqueeLink": "https://dxy.me/beHQO8"
     },
     {
-      "id": 1643,
-      "marqueeLabel": "深刻教训",
-      "marqueeContent": "隐瞒发热返京女子被美雇主开除",
-      "marqueeLink": "https://dxy.me/UV6SJN"
+      "id": 1679,
+      "marqueeLabel": "坏信号",
+      "marqueeContent": "广东通报一例境外输入关联病例",
+      "marqueeLink": "https://dxy.me/P8kJ72"
     }
   ],
   "quanguoTrendChart": [
     {
-      "imgUrl": "https://img1.dxycdn.com/2020/0321/124/3403225705499836852-135.png",
+      "imgUrl": "https://img1.dxycdn.com/2020/0323/708/3403613395017680242-135.png",
       "title": "新增疑似/新增确诊"
     },
     {
-      "imgUrl": "https://img1.dxycdn.com/2020/0321/986/3403225720531734188-135.png",
+      "imgUrl": "https://img1.dxycdn.com/2020/0323/300/3403613429377106062-135.png",
       "title": "现存确诊"
     },
     {
-      "imgUrl": "https://img1.dxycdn.com/2020/0321/481/3403225733416636494-135.png",
+      "imgUrl": "https://img1.dxycdn.com/2020/0323/098/3403613463737159987-135.png",
       "title": "现存疑似"
     },
     {
-      "imgUrl": "https://img1.dxycdn.com/2020/0321/939/3403225744154543801-135.png",
+      "imgUrl": "https://img1.dxycdn.com/2020/0323/309/3403613478769546416-135.png",
       "title": "治愈"
     },
     {
-      "imgUrl": "https://img1.dxycdn.com/2020/0321/892/3403225754891962450-135.png",
+      "imgUrl": "https://img1.dxycdn.com/2020/0323/511/3403613498096900073-135.png",
       "title": "死亡"
     }
   ],
   "hbFeiHbTrendChart": [
     {
-      "imgUrl": "https://img1.dxycdn.com/2020/0321/165/3403225892330431390-135.png",
+      "imgUrl": "https://img1.dxycdn.com/2020/0323/269/3403613541046574828-135.png",
       "title": "非湖北新增确诊"
     },
     {
-      "imgUrl": "https://img1.dxycdn.com/2020/0321/044/3403225903068338586-135.png",
+      "imgUrl": "https://img1.dxycdn.com/2020/0323/541/3403613596881151982-135.png",
       "title": "湖北新增确诊"
     },
     {
-      "imgUrl": "https://img1.dxycdn.com/2020/0321/459/3403225920248208377-135.png",
+      "imgUrl": "https://img1.dxycdn.com/2020/0323/853/3403613637683029298-135.png",
       "title": "湖北现存确诊"
     },
     {
-      "imgUrl": "https://img1.dxycdn.com/2020/0321/677/3403225933132622105-135.png",
+      "imgUrl": "https://img1.dxycdn.com/2020/0323/741/3403613665600317953-135.png",
       "title": "非湖北现存确诊"
     },
     {
-      "imgUrl": "https://img1.dxycdn.com/2020/0321/289/3403225943870529250-135.png",
+      "imgUrl": "https://img1.dxycdn.com/2020/0323/428/3403613680633017892-135.png",
       "title": "治愈/死亡"
     }
   ],
@@ -209,26 +209,26 @@
     }
   ],
   "foreignStatistics": {
-    "currentConfirmedCount": 171738,
-    "confirmedCount": 201606,
+    "currentConfirmedCount": 227510,
+    "confirmedCount": 266013,
     "suspectedCount": 4,
-    "curedCount": 21330,
-    "deadCount": 8538,
-    "suspectedIncr": -606,
-    "currentConfirmedIncr": 9253,
-    "confirmedIncr": 11693,
-    "curedIncr": 1894,
-    "deadIncr": 546
+    "curedCount": 26536,
+    "deadCount": 11967,
+    "suspectedIncr": 0,
+    "currentConfirmedIncr": 10271,
+    "confirmedIncr": 12919,
+    "curedIncr": 1931,
+    "deadIncr": 717
   },
   "globalStatistics": {
-    "currentConfirmedCount": 178049,
-    "confirmedCount": 283063,
-    "curedCount": 93215,
-    "deadCount": 11799,
-    "currentConfirmedIncr": 8801,
-    "confirmedIncr": 11850,
-    "curedIncr": 2495,
-    "deadIncr": 554
+    "currentConfirmedCount": 233077,
+    "confirmedCount": 347704,
+    "curedCount": 99384,
+    "deadCount": 15243,
+    "currentConfirmedIncr": 9989,
+    "confirmedIncr": 13112,
+    "curedIncr": 2397,
+    "deadIncr": 726
   },
   "globalOtherTrendChartData": "https://file1.dxycdn.com/2020/0319/925/3402966424766255493-135.json"
 }

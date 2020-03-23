@@ -1,5 +1,6 @@
 const _ = require('lodash')
 const countries = require('../data/countries.json')
+const { FileBox } = require('wechaty')
 const stat = require('../data/stat.json')
 
 function format ({ deadCount, curedCount, confirmedCount, currentConfirmedCount}) {
@@ -19,16 +20,23 @@ exports.keyword = (keyword) => {
   if (!country) {
     return
   }
-  return format(country)
+  const charts = stat.importantForeignTrendChart
+  const chart = charts.find(chart => chart.title.startsWith(country.provinceName))
+  const data = [format(country)]
+  if (chart) {
+    data.push(FileBox.fromUrl(chart.imgUrl))
+  }
+  return data
 }
 
 // 根据关键字疫情，返回所有疫情信息
 exports.ncov = (keyword) => {
-  return [
+  const data = [[
     '国家, 确诊, 死亡, 病死率',
     ..._.sortBy(countries, x => -x.currentConfirmedCount).slice(0, 30).map(country => {
       const { deadCount, confirmedCount, currentConfirmedCount } = country
       return `${country.provinceName}【${confirmedCount}】【${deadCount}】【${_.round(deadCount / confirmedCount * 100, 2)}%】`
     })
-  ].join('\n')
+  ].join('\n')]
+  return data
 }

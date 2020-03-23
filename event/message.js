@@ -6,15 +6,19 @@ const routes = [
   { keyword: '',     handle: covid.keyword }
 ]
 
+async function reply (msg, data) {
+  for (const text of data) {
+    await msg.say(text)
+  }
+}
+
 async function handleMessage (msg) {
   if (msg.type() == Message.Type.Text) {
     if (!msg.room()) {
       console.log(msg)
       const route = routes.find(route => msg.text().includes(route.keyword))
-      const reply = route.handle(msg.text())
-      if (reply) {
-        await msg.say(reply)
-      }
+      const data = route.handle(msg.text())
+      await reply(msg, data)
     }
   }
 }
