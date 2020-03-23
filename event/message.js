@@ -1,5 +1,5 @@
 const { Message } = require('wechaty')
-const covid = require('./covid')
+const covid = require('../message/covid')
 
 const routes = [
   { keyword: '疫情', handle: covid.ncov },

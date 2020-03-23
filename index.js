@@ -2,8 +2,8 @@ const { Wechaty, Message } = require('wechaty')
 const { PuppetPadplus } = require('wechaty-puppet-padplus')
 const Qrterminal = require('qrcode-terminal')
 
-const message = require('./message')
-const friendShip = require('./friend-ship')
+const message = require('./event/message')
+const friendShip = require('./event/friend-ship')
 
 const bot = new Wechaty({
   puppet: new PuppetPadplus(),
