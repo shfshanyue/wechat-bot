@@ -1,14 +1,21 @@
 const { Message } = require('wechaty')
+const _ = require('lodash')
+
 const covid = require('../message/covid')
+const fund = require('../message/fund')
 
 const routes = [
   { keyword: '疫情', handle: covid.ncov },
+  { keyword: '基金', handle: fund.topFund },
   { keyword: '',     handle: covid.keyword }
 ]
 
-async function reply (msg, data) {
+async function reply (msg, _data) {
+  const data = _.concat(_data)
   for (const text of data) {
-    await msg.say(text)
+    if (text) {
+      await msg.say(text)
+    }
   }
 }
 
@@ -17,7 +24,7 @@ async function handleMessage (msg) {
     if (!msg.room()) {
       console.log(msg)
       const route = routes.find(route => msg.text().includes(route.keyword))
-      const data = route.handle(msg.text())
+      const data = await route.handle(msg.text())
       await reply(msg, data)
     }
   }
