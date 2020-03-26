@@ -4,6 +4,7 @@ const Qrterminal = require('qrcode-terminal')
 
 const message = require('./event/message')
 const friendShip = require('./event/friend-ship')
+const roomJoin = require('./event/room-join')
 
 const bot = new Wechaty({
   puppet: new PuppetPadplus(),
@@ -16,7 +17,7 @@ function handleScan (qrcode) {
 
 bot
   .on("scan", handleScan)
-  // .on("room-join", onRoomJoin)
+  .on("room-join", roomJoin.handleRoomJoin)
   .on("friendship", friendShip.handleFriendShip)
   .on("message", message.handleMessage)
   .start()
