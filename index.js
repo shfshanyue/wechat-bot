@@ -6,6 +6,8 @@ const message = require('./event/message')
 const friendShip = require('./event/friend-ship')
 const roomJoin = require('./event/room-join')
 
+const schedule = require('./schedule/index')
+
 const bot = new Wechaty({
   puppet: new PuppetPadplus(),
   name: 'daxiange'
@@ -21,3 +23,10 @@ bot
   .on("friendship", friendShip.handleFriendShip)
   .on("message", message.handleMessage)
   .start()
+
+// 需要保证 bot start 之后调用
+// 然而 bot.start().then() 无法触达，只好使用这种笨办法
+setTimeout(() => {
+  schedule(bot)
+}, 2000)
+

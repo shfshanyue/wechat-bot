@@ -3,10 +3,12 @@ const _ = require('lodash')
 
 const covid = require('../message/covid')
 const fund = require('../message/fund')
+const interview = require('../message/interview')
 
 const routes = [
   { keyword: '疫情', handle: covid.ncov },
   { keyword: '基金', handle: fund.topFund },
+  { keyword: '面试', handle: interview.randomQuestion },
   { keyword: '',     handle: covid.keyword }
 ]
 
