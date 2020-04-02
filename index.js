@@ -28,5 +28,5 @@ bot
 // 然而 bot.start().then() 无法触达，只好使用这种笨办法
 setTimeout(() => {
   schedule(bot)
-}, 2000)
+}, 3000)
 
