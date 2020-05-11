@@ -1,6 +1,6 @@
 const { Friendship } = require("wechaty")
 
-const frienddShipRe = /疫情/
+const frienddShipRe = /疫情|我是|面试|领课/
 
 // 添加好友
 exports.handleFriendShip = async (friendship) => {

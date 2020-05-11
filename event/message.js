@@ -24,7 +24,6 @@ async function reply (msg, _data) {
 async function handleMessage (msg) {
   if (msg.type() == Message.Type.Text) {
     if (!msg.room() || await msg.mentionSelf()) {
-      console.log(msg)
       const self = await msg.to()
       const text = msg.text().replace("@" + self.name(), '')
       const route = routes.find(route => text.includes(route.keyword))

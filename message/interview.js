@@ -1,6 +1,6 @@
 const axios = require('axios')
 
-const api = 'https://we.dev.shanyue.tech/api/issues/random'
+const api = 'https://we.shanyue.tech/api/issues/random'
 
 function getQuestion () {
   return axios.get(api).then(({ data }) => {
