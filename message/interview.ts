@@ -8,7 +8,7 @@ function getQuestion () {
   })
 }
 
-exports.randomQuestion = async () => {
+export const randomQuestion = async () => {
   const q = await getQuestion()
   return `今日面试题：${q.title.slice(6)}
 

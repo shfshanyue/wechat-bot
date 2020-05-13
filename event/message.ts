@@ -1,9 +1,9 @@
-const { Message } = require('wechaty')
-const _ = require('lodash')
+import { Message } from 'wechaty'
+import _ from 'lodash'
 
-const covid = require('../message/covid')
-const fund = require('../message/fund')
-const interview = require('../message/interview')
+import * as covid from '../message/covid'
+import * as fund from '../message/fund'
+import * as interview from '../message/interview'
 
 const routes = [
   { keyword: '疫情', handle: covid.ncov },
@@ -21,7 +21,7 @@ async function reply (msg, _data) {
   }
 }
 
-async function handleMessage (msg) {
+export async function handleMessage (msg) {
   if (msg.type() == Message.Type.Text) {
     if (!msg.room() || await msg.mentionSelf()) {
       const self = await msg.to()
@@ -32,5 +32,3 @@ async function handleMessage (msg) {
     }
   }
 }
-
-exports.handleMessage = handleMessage

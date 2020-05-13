@@ -1,4 +1,4 @@
-const _ = require('lodash')
+import _ from 'lodash'
 
 const me = ['wxid_fw1ohd5c982222', 'wxid_1qizr97llbta22']
 
@@ -12,7 +12,7 @@ const hello = contact => _.trim(`
 github: https://github.com/shfshanyue
 `)
 
-exports.handleRoomJoin = (room, inviteeList) => {
+export const handleRoomJoin = (room, inviteeList) => {
   if (me.includes(room.owner().id)) {
     inviteeList.map(c => {
       room.say(hello(c), c)

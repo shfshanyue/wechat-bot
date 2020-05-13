@@ -6,20 +6,24 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "ncu": "ncu",
-    "dev": "nodemon"
+    "dev": "nodemon index.ts"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/cron": "^1.7.2",
+    "@types/lodash": "^4.14.150",
     "cron": "^1.8.2",
     "lodash": "^4.17.15",
     "npm-check-updates": "^5.0.0",
     "qrcode-terminal": "^0.12.0",
+    "ts-node": "^8.10.1",
     "wechaty": "^0.38.4",
     "wechaty-puppet-padplus": "^0.6.3"
   },
   "devDependencies": {
     "axios": "^0.19.2",
-    "nodemon": "^2.0.3"
+    "nodemon": "^2.0.3",
+    "typescript": "^3.9.2"
   }
 }
