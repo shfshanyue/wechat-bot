@@ -10,11 +10,13 @@ function getQuestion () {
 
 export const randomQuestion = async () => {
   const q = await getQuestion()
-  return `今日面试题：${q.title.slice(6)}
+  const title = `今日面试题：${q.title.slice(6)}
 
 可以在此进行讨论 https://github.com/shfshanyue/Daily-Question/issues/${q.number}
 
 ---
 每天九点自动推送一道面试题
 `
+  const answer = q?.comment?.body || ''
+  return [title, answer]
 }

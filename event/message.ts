@@ -12,7 +12,7 @@ const routes = [
   { keyword: '',     handle: covid.keyword }
 ]
 
-async function reply (msg, _data) {
+async function reply (msg: Message, _data) {
   const data = _.concat(_data)
   for (const text of data) {
     if (text) {
@@ -21,12 +21,14 @@ async function reply (msg, _data) {
   }
 }
 
-export async function handleMessage (msg) {
+export async function handleMessage (msg: Message) {
   if (msg.type() == Message.Type.Text) {
-    if (!msg.room() || await msg.mentionSelf()) {
-      const self = await msg.to()
+    if (!msg.room() || (await msg.mentionSelf() && msg.room().owner().name() === '山月')) {
+      const self = msg.to()
       const text = msg.text().replace("@" + self.name(), '')
-      const route = routes.find(route => text.includes(route.keyword))
+      const route = routes.find(route => {
+        return text.includes(route.keyword)
+      })
       const data = await route.handle(text)
       await reply(msg, data)
     }

@@ -9,7 +9,9 @@ export default async (bot: Wechaty) => {
     const q = await randomQuestion()
     for (const room of rooms) {
       // const alias = await room.
-      await room.say(q)
+      for (const text of q) {
+        await room.say(text)
+      }
     }
   }, null, true, 'Asia/Shanghai')
 }
