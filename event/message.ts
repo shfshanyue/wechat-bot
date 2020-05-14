@@ -4,11 +4,13 @@ import _ from 'lodash'
 import * as covid from '../message/covid'
 import * as fund from '../message/fund'
 import * as interview from '../message/interview'
+import { recentArticle } from '../message/article'
 
 const routes = [
   { keyword: '疫情', handle: covid.ncov },
   { keyword: '基金', handle: fund.topFund },
   { keyword: '面试', handle: interview.randomQuestion },
+  { keyword: '文章', handle: recentArticle },
   { keyword: '',     handle: covid.keyword }
 ]
 

@@ -1,3 +1,5 @@
 node_modules
 *.memory-card.json
 data
+
+service/article.ts
