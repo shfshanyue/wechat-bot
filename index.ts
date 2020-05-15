@@ -1,6 +1,7 @@
 import { Wechaty } from 'wechaty'
 import { PuppetPadplus } from 'wechaty-puppet-padplus'
 import Qrterminal from 'qrcode-terminal'
+import pMap from 'p-map'
 
 import * as message from './event/message'
 import * as friendShip from './event/friend-ship'
