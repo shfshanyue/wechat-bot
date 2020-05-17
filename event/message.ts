@@ -24,8 +24,8 @@ async function reply (msg: Message, _data) {
 }
 
 export async function handleMessage (msg: Message) {
-  if (msg.type() == Message.Type.Text) {
-    if (!msg.room() || (await msg.mentionSelf() && msg?.room().owner().name() === '山月')) {
+  if (msg.type() === Message.Type.Text) {
+    if (!msg.room() || (await msg.mentionSelf() && msg?.room().owner().name().includes('山月'))) {
       const self = msg.to()
       const text = msg.text().replace("@" + self.name(), '')
       const route = routes.find(route => {

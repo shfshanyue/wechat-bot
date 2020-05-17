@@ -10,7 +10,9 @@ export default async (bot: Wechaty) => {
     for (const room of rooms) {
       // const alias = await room.
       for (const text of q) {
-        await room.say(text)
+        if (room.owner().name().includes('山月')) {
+          await room.say(text)
+        }
       }
     }
   }, null, true, 'Asia/Shanghai')
