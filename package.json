@@ -12,10 +12,10 @@
   "license": "ISC",
   "dependencies": {
     "@types/cron": "^1.7.2",
-    "@types/lodash": "^4.14.150",
+    "@types/lodash": "^4.14.151",
     "cron": "^1.8.2",
     "lodash": "^4.17.15",
-    "npm-check-updates": "^5.0.0",
+    "npm-check-updates": "^6.0.1",
     "p-filter": "^2.1.0",
     "p-map": "^4.0.0",
     "pp-map": "^1.0.4",
@@ -26,7 +26,7 @@
   },
   "devDependencies": {
     "axios": "^0.19.2",
-    "nodemon": "^2.0.3",
+    "nodemon": "^2.0.4",
     "typescript": "^3.9.2"
   }
 }
