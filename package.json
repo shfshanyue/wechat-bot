@@ -12,21 +12,21 @@
   "license": "ISC",
   "dependencies": {
     "@types/cron": "^1.7.2",
-    "@types/lodash": "^4.14.151",
+    "@types/lodash": "^4.14.155",
     "cron": "^1.8.2",
     "lodash": "^4.17.15",
-    "npm-check-updates": "^6.0.1",
+    "npm-check-updates": "^7.0.1",
     "p-filter": "^2.1.0",
     "p-map": "^4.0.0",
     "pp-map": "^1.0.4",
     "qrcode-terminal": "^0.12.0",
-    "ts-node": "^8.10.1",
-    "wechaty": "^0.38.4",
+    "ts-node": "^8.10.2",
+    "wechaty": "^0.40.10",
     "wechaty-puppet-padplus": "^0.6.3"
   },
   "devDependencies": {
     "axios": "^0.19.2",
     "nodemon": "^2.0.4",
-    "typescript": "^3.9.2"
+    "typescript": "^3.9.5"
   }
 }
