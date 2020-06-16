@@ -6,12 +6,13 @@ import * as fund from '../message/fund'
 import * as interview from '../message/interview'
 import { recentArticle } from '../message/article'
 
+const defaultRoute = { keyword: '', handle: covid.keyword }
 const routes = [
   { keyword: '疫情', handle: covid.ncov },
   { keyword: '基金', handle: fund.topFund },
   { keyword: '面试', handle: interview.randomQuestion },
   { keyword: '文章', handle: recentArticle },
-  { keyword: '',     handle: covid.keyword }
+  defaultRoute
 ]
 
 async function reply (msg: Message, _data) {
@@ -25,12 +26,12 @@ async function reply (msg: Message, _data) {
 
 export async function handleMessage (msg: Message) {
   if (msg.type() === Message.Type.Text) {
-    if (!msg.room() || (await msg.mentionSelf() && msg?.room().owner().name().includes('山月'))) {
+    if (!msg.room() || (await msg.mentionSelf() && msg.room()!.owner()!.name().includes('山月'))) {
       const self = msg.to()
-      const text = msg.text().replace("@" + self.name(), '')
+      const text = msg.text().replace("@" + self?.name(), '')
       const route = routes.find(route => {
         return text.includes(route.keyword)
-      })
+      }) || defaultRoute
       const data = await route.handle(text)
       await reply(msg, data)
     }
