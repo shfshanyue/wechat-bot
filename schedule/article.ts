@@ -1,16 +1,10 @@
 import { Wechaty } from 'wechaty'
 import { CronJob } from 'cron'
 import pFilter from 'p-filter'
-import pMap from 'p-map'
+import { map as pMap, sleep } from '@shanyue/promise-utils'
 import _ from 'lodash'
 import { recentArticle } from '../message/article'
 import config from '../config'
-
-function sleep (n: number) {
-  return new Promise(resolve => {
-    setTimeout(resolve, n * 1000)
-  })
-}
 
 // 找到前端面试，及前端进阶开头的群名，每天 12:13 定时推送
 export default async (bot: Wechaty) => {
