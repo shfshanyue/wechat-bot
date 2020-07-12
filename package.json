@@ -14,12 +14,12 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@sentry/node": "^5.18.1",
-    "@shanyue/promise-utils": "^2.0.3",
+    "@sentry/node": "^5.19.1",
+    "@shanyue/promise-utils": "^2.0.4",
     "@types/cron": "^1.7.2",
     "@types/lodash": "^4.14.157",
     "cron": "^1.8.2",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "npm-check-updates": "^7.0.1",
     "p-filter": "^2.1.0",
     "p-map": "^4.0.0",
@@ -32,6 +32,6 @@
   "devDependencies": {
     "axios": "^0.19.2",
     "nodemon": "^2.0.4",
-    "typescript": "^3.9.5"
+    "typescript": "^3.9.6"
   }
 }

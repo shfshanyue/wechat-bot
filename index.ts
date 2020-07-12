@@ -32,6 +32,13 @@ bot
   })
   .start()
   .then(() => {
+    bot.Room.findAll().then(async rooms => {
+      for (const room of rooms) {
+        const name = await room.topic()
+        const id = room.id
+        console.log(name, id)
+      }
+    })
     schedule(bot)
   })
 
