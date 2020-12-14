@@ -8,7 +8,7 @@ import { recentArticle } from '../message/article'
 
 const defaultRoute = { keyword: '', handle: covid.keyword }
 const routes = [
-  { keyword: '疫情', handle: covid.ncov },
+  // { keyword: '疫情', handle: covid.ncov },
   { keyword: '基金', handle: fund.topFund },
   { keyword: '面试', handle: interview.randomQuestion },
   { keyword: '文章', handle: recentArticle },

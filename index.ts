@@ -2,6 +2,7 @@ import { Wechaty } from 'wechaty'
 import { PuppetPadplus } from 'wechaty-puppet-padplus'
 import Qrterminal from 'qrcode-terminal'
 import * as Sentry from '@sentry/node'
+import { map as pMap, sleep } from '@shanyue/promise-utils'
 
 import * as message from './event/message'
 import * as friendShip from './event/friend-ship'
@@ -32,6 +33,7 @@ bot
   })
   .start()
   .then(() => {
+    console.log('hello, world')
     bot.Room.findAll().then(async rooms => {
       for (const room of rooms) {
         const name = await room.topic()

@@ -9,18 +9,17 @@ import config from '../config'
 
 // 找到前端面试，及前端进阶开头的群名，每天 12:13 定时推送
 export default async (bot: Wechaty) => {
-  return new CronJob('10 12 * * *', async () => {
+  return new CronJob('30 18 * * *', async () => {
     const rooms = await bot.Room.findAll()
     const targetRooms = await pFilter(rooms, async room => {
       const id = room.id
       return config.groupRooms.join('').includes(id)
     })
     const article = await recentArticle()
-    const time = 60 * _.random(5, 20)
     // const time = 10
-    await pMap(targetRooms, async room => {
+    await pMap(targetRooms, async (room, i) => {
       let success = true
-      await sleep(time)
+      const time = 60 * _.random(15, 25) * 1000
       try {
         await room.say(article)
       } catch (e) {
@@ -30,10 +29,11 @@ export default async (bot: Wechaty) => {
       } finally {
         const name = await room.topic()
         const now = new Date()
-        console.log(name, success, now.toJSON())
+        console.log(i, name, success, now.toJSON())
       }
+      await sleep(time)
     }, {
-      concurrency: 6
+      concurrency: 5
     })
   }, null, true, 'Asia/Shanghai')
 }
