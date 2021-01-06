@@ -30,7 +30,7 @@
     "wechaty-puppet-padplus": "^0.6.6"
   },
   "devDependencies": {
-    "axios": "^0.21.0",
+    "axios": "^0.21.1",
     "nodemon": "^2.0.6",
     "typescript": "^4.1.3"
   }
