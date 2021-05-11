@@ -19,7 +19,7 @@
     "@types/cron": "^1.7.2",
     "@types/lodash": "^4.14.165",
     "cron": "^1.8.2",
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.21",
     "npm-check-updates": "^10.2.5",
     "p-filter": "^2.1.0",
     "p-map": "^4.0.0",
