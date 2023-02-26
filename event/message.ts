@@ -3,15 +3,6 @@ import { Message } from 'wechaty'
 import * as PUPPET from 'wechaty-puppet'
 import { routes } from '../message'
 
-async function reply (msg: Message, _data) {
-  const data = _.concat(_data)
-  for (const text of data) {
-    if (text) {
-      await msg.say(text)
-    }
-  }
-}
-
 export async function handleMessage (msg: Message) {
   if (msg.type() === PUPPET.types.Message.Text) {
     if (!msg.room() || (await msg.mentionSelf() && msg.room()!.owner()!.name().includes('山月'))) {
