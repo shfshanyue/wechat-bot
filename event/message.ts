@@ -1,17 +1,13 @@
-import { Message } from 'wechaty'
 import _ from 'lodash'
+import { Message } from 'wechaty'
 
-import * as covid from '../message/covid'
 import * as fund from '../message/fund'
 import * as interview from '../message/interview'
-import { recentArticle } from '../message/article'
 
-const defaultRoute = { keyword: '', handle: covid.keyword }
+const defaultRoute = { keyword: '', handle: fund.topFund }
 const routes = [
-  // { keyword: '疫情', handle: covid.ncov },
   { keyword: '基金', handle: fund.topFund },
   { keyword: '面试', handle: interview.randomQuestion },
-  { keyword: '文章', handle: recentArticle },
   defaultRoute
 ]
 
@@ -25,14 +21,15 @@ async function reply (msg: Message, _data) {
 }
 
 export async function handleMessage (msg: Message) {
-  if (msg.type() === Message.Type.Text) {
+  console.log(msg)
+  if (msg.type() === 3) {
     if (!msg.room() || (await msg.mentionSelf() && msg.room()!.owner()!.name().includes('山月'))) {
       const self = msg.to()
-      const text = msg.text().replace("@" + self?.name(), '')
+      const text = msg.text().replace("@" + self?.name(), '') || ''
       const route = routes.find(route => {
         return text.includes(route.keyword)
       }) || defaultRoute
-      const data = await route.handle(text)
+      const data = await route.handle()
       await reply(msg, data)
     }
   }

@@ -14,24 +14,24 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@sentry/node": "^5.29.0",
+    "@sentry/node": "^7.38.0",
     "@shanyue/promise-utils": "^2.0.4",
-    "@types/cron": "^1.7.2",
-    "@types/lodash": "^4.14.165",
-    "cron": "^1.8.2",
-    "lodash": "^4.17.20",
-    "npm-check-updates": "^10.2.5",
-    "p-filter": "^2.1.0",
-    "p-map": "^4.0.0",
+    "@types/cron": "^2.0.0",
+    "@types/lodash": "^4.14.191",
+    "cron": "^2.2.0",
+    "lodash": "^4.17.21",
+    "nodemon": "^2.0.20",
+    "npm-check-updates": "^16.7.9",
+    "p-filter": "^3.0.0",
+    "p-map": "^5.5.0",
     "pp-map": "^1.0.4",
     "qrcode-terminal": "^0.12.0",
-    "ts-node": "^9.1.1",
-    "wechaty": "^0.50.7",
-    "wechaty-puppet-padplus": "^0.6.6"
+    "ts-node": "^10.9.1",
+    "wechaty": "^1.20.2",
+    "wechaty-puppet-wechat": "^1.18.4"
   },
   "devDependencies": {
-    "axios": "^0.21.0",
-    "nodemon": "^2.0.6",
-    "typescript": "^4.1.3"
+    "axios": "^1.3.4",
+    "typescript": "^4.9.5"
   }
 }
