@@ -8,7 +8,7 @@ function getFunds () {
   })
 }
 
-export const topFund = async () => {
+export async function topFund (): Promise<string> {
   const funds = await getFunds()
-  return funds.map(fund => `${fund[0]}: ${fund[1]}`).join('\n')
+  return funds.map((fund: string[]) => `${fund[0]}: ${fund[1]}`).join('\n')
 }

@@ -9,7 +9,7 @@
     "dev": "nodemon index.ts"
   },
   "engines": {
-    "node": ">= 12"
+    "node": ">= 16"
   },
   "author": "",
   "license": "ISC",
@@ -28,6 +28,7 @@
     "qrcode-terminal": "^0.12.0",
     "ts-node": "^10.9.1",
     "wechaty": "^1.20.2",
+    "wechaty-puppet": "^1.20.2",
     "wechaty-puppet-wechat": "^1.18.4"
   },
   "devDependencies": {

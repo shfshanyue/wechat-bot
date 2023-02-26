@@ -4686,7 +4686,7 @@ wechaty-puppet-wechat@^1.18.4:
     watchdog "^0.8.17"
     xml2js "^0.4.23"
 
-wechaty-puppet@^1.20.1:
+wechaty-puppet@^1.20.1, wechaty-puppet@^1.20.2:
   version "1.20.2"
   resolved "https://registry.npmjs.org/wechaty-puppet/-/wechaty-puppet-1.20.2.tgz#facd71b5cf0cb2a6dfae205114f6beeb2230401a"
   integrity sha512-IXcnUc9A3hGIT+9CEF8KLkbdld+AQPfVlWLeUXmmSvm3I9NbSbVfU43FZvKMjvLCexvN5DZq2+JZdASESohI5Q==
