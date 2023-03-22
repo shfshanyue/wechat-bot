@@ -30,13 +30,12 @@ bot
   .on('friendship', friendShip.handleFriendShip)
   .on('message', message.handleMessage)
   .on('login', () => {
-    bot.Room.findAll().then(async (rooms) => {
-      for (const room of rooms) {
-        const name = await room.topic()
-        const id = room.id
-        console.log(name, id)
-      }
-    })
+    console.log(bot.name(), '登录成功')
+    setTimeout(() => {
+      bot.Contact.findAll().then(async (contacts) => {
+        console.log(contacts.length)
+      })
+    }, 10000)
     schedule(bot)
   })
   .on('error', (error) => {
