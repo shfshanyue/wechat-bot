@@ -21,9 +21,9 @@ $ yarn start
 
 2. 与机器人对话，机器人默认原样回复
 
-![](https://static.shanyue.tech/images/23-03-22/clipboard-0923.93bec5.webp)
+<img src="https://static.shanyue.tech/images/23-03-22/clipboard-0923.93bec5.webp" width="400">
 
 ## 交流
 
-![](https://static.shanyue.tech/images/23-03-22/clipboard-5137.800093.webp)
+<img src="https://static.shanyue.tech/images/23-03-22/clipboard-5137.800093.webp" width="300">
 
