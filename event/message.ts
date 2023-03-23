@@ -6,7 +6,11 @@ async function defaultFilter(msg: Message) {
   return msg.type() === MessageType.Text && !msg.room()
 }
 
+const createdAt = Date.now()
 export async function handleMessage(msg: Message) {
+  if (msg.date().getTime() < createdAt) {
+    return
+  }
   const self = msg.listener()
   const text = msg.text().replace('@' + self?.name(), '') || ''
   const route = routes.find((route) => {

@@ -16,5 +16,13 @@ export const routes: Route[] = [
     },
   },
   { keyword: '基金', handle: fund.handle },
-  { keyword: '', handle: echo.handle },
+  {
+    keyword: '',
+    handle: echo.handle,
+    // 仅仅是一个示例
+    // 仅仅对名称为 山月 的人，进行原样输出对话
+    filter(msg) {
+      return msg.talker().name() === '山月'
+    },
+  },
 ]
