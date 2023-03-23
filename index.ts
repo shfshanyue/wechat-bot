@@ -1,5 +1,5 @@
 import { WechatyBuilder } from 'wechaty'
-import { Contact } from 'wechaty-puppet/types'
+import { Contact as ContactType } from 'wechaty-puppet/types'
 import Qrterminal from 'qrcode-terminal'
 import * as Sentry from '@sentry/node'
 
@@ -8,9 +8,10 @@ import * as friendShip from './event/friend-ship'
 import * as roomJoin from './event/room-join'
 
 import { schedule } from './schedule'
+import config from './config'
 
 Sentry.init({
-  dsn: 'https://f1dd118c70e04dc2bfbcd7296ae11f05@o274112.ingest.sentry.io/5278778',
+  dsn: config.sentryDsn
 })
 
 const bot = WechatyBuilder.build({
@@ -35,7 +36,7 @@ bot
     setTimeout(() => {
       bot.Contact.findAll().then(async (contacts) => {
         const friends = contacts.filter(contact => {
-          return contact.type() === Contact.Individual
+          return contact.type() === ContactType.Individual
         })
         console.log('您的好友数量', friends.length)
       })

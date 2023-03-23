@@ -1,8 +1,6 @@
 import _ from 'lodash'
 import { Contact, Room } from 'wechaty'
 
-const me = ['wxid_fw1ohd5c982222', 'wxid_1qizr97llbta22']
-
 const hello = (contact: Contact) => _.trim(`
 欢迎新人入群, 请注意修改昵称 (eg. 山月-前端-北京)
 
@@ -13,8 +11,9 @@ const hello = (contact: Contact) => _.trim(`
 github: https://github.com/shfshanyue
 `)
 
-export const handleRoomJoin = (room: Room, inviteeList: Contact[]) => {
-  if (me.includes(room.owner().id)) {
+export const handleRoomJoin = (room: Room, inviteeList: Contact[], inviter: Contact) => {
+  // 如果被邀请进个人群，则打招呼
+  if ([/* 个人群的群主 ID 列表 */].includes(room.owner().id)) {
     inviteeList.forEach(c => {
       room.say(hello(c), c)
     })

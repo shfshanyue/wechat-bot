@@ -1,6 +1,5 @@
 node_modules
 *.memory-card.json
 data
-config.ts
 service/article.ts
 package-lock.json
