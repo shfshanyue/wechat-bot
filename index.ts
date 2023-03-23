@@ -1,4 +1,5 @@
 import { WechatyBuilder } from 'wechaty'
+import { Contact } from 'wechaty-puppet/types'
 import Qrterminal from 'qrcode-terminal'
 import * as Sentry from '@sentry/node'
 
@@ -33,7 +34,10 @@ bot
     console.log(bot.name(), '登录成功')
     setTimeout(() => {
       bot.Contact.findAll().then(async (contacts) => {
-        console.log(contacts.length)
+        const friends = contacts.filter(contact => {
+          return contact.type() === Contact.Individual
+        })
+        console.log('您的好友数量', friends.length)
       })
     }, 10000)
     schedule(bot)

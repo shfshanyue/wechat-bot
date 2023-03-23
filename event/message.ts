@@ -1,4 +1,3 @@
-import _ from 'lodash'
 import { Message } from 'wechaty'
 import * as PUPPET from 'wechaty-puppet'
 import { routes } from '../message'
