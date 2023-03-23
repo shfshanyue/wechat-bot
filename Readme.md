@@ -11,12 +11,25 @@
 
 > Wechaty is a Bot SDK for Wechat Individual Account which can help you create a bot in 6 lines of javascript, with cross-platform support including Linux, Windows, MacOS, and Docker.
 
+## 目录结构
+
+``` bash
+$ tree -L 1
+.
+├── Readme.md
+├── event/           # 关于 wechaty 的事件处理程序
+├── message/
+├── schedule
+├── config.ts
+└── index.ts
+```
+
 ## 步骤
 
 1. 开启一个微信机器人，使用将要作为机器人的微信扫码进行登录
 
 ``` bash
-$ yarn start
+$ npm start
 ```
 
 2. 与机器人对话，机器人默认原样回复

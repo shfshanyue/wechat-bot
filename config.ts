@@ -3,4 +3,6 @@ export default {
 
   // 自动同意添加好友的口令
   acceptText: /芝麻开门/,
+
+  logger: true
 }

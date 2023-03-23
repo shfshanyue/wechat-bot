@@ -1,3 +1,3 @@
-export function echo (text: string) {
+export function handle (text: string) {
   return text
 }

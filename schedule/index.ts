@@ -1,7 +1,14 @@
 import { Wechaty } from 'wechaty'
-
-import inteviewBot from './interview'
+import path from 'path'
+import fs from 'fs'
 
 export async function schedule(bot: Wechaty) {
-  await inteviewBot(bot)
+  const files = fs.readdirSync(__dirname).filter((file) => {
+    return file !== 'index.ts'
+  })
+  for (const file of files) {
+    await import(path.join(__dirname, file)).then((m) => {
+      return m.default(bot)
+    })
+  }
 }
