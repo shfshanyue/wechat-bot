@@ -3,9 +3,9 @@ import * as echo from './echo'
 import * as fund from './fund'
 
 type Route = {
-  handle: ((text: string) => Sayable) | ((text: string) => Promise<Sayable>)
+  handle: ((text: string, msg: Message) => Sayable) | ((text: string, msg: Message) => Promise<Sayable>)
   keyword: string | RegExp
-  filter?: (msg: Message) => boolean
+  filter?: (msg: Message) => boolean | Promise<boolean>
 }
 
 export const routes: Route[] = [
