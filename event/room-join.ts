@@ -1,7 +1,6 @@
-import _ from 'lodash'
 import { Contact, Room } from 'wechaty'
 
-const hello = (contact: Contact) => _.trim(`
+const hello = (contact: Contact) => `
 欢迎新人入群, 请注意修改昵称 (eg. 山月-前端-北京)
 
 ---
@@ -9,7 +8,7 @@ const hello = (contact: Contact) => _.trim(`
 
 博客: https://shanyue.tech
 github: https://github.com/shfshanyue
-`)
+`.trim()
 
 export const handleRoomJoin = (room: Room, inviteeList: Contact[], inviter: Contact) => {
   // 如果被邀请进个人群，则打招呼
